@@ -18,11 +18,14 @@ function logs_index(){
     
     return (
         <div className="Logs">
-
      <section>
+        <ul>
         {logs.map((log, index) => {
-            return <li key={index}>{log.title}</li>
+            return 
+                <li key={index}>{log.title}</li>
+                    
         })}
+        </ul>
      </section>
 
 
