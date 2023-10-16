@@ -1,14 +1,19 @@
 import { useEffect, useState } from "react";
 
 function App() {
-  const [backEndLogs, setBackEndLogs] = useState([{}]);
 
+  
+  const [backEndLogs, setBackEndLogs] = useState([{}]);
+  
   useEffect(() => {
+    
+    const API = import.meta.env.VITE_API_URL
+
     fetch(`${API}/logs`)
       .then((response) => response.json())
       .then((responseJSON) => setBackEndLogs(responseJSON))
       .catch((error) => console.error(error));
-  }, []);
+  }, [backEndLogs]);
 
   console.log(backEndLogs);
 
