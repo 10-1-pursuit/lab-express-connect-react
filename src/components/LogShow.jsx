@@ -44,6 +44,7 @@ export default function LogShow() {
                 <p>Days Since Incident: {log.daysSinceLastCrisis}</p>
                 <button onClick={() => navigate('/logs')}>Back</button>
                 <button onClick={handleDelete}>Delete</button>
+                <button onClick={() => navigate(`/logs/${id}/edit`)}>Edit</button>
         </div>
             )}
             </div>

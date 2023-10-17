@@ -22,6 +22,7 @@ useEffect(() => {
 
   return (
     <>
+    <h1>Index</h1>
       {logs === null && <div>Loading...</div>}
       {logs && (
         <>
