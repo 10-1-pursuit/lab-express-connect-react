@@ -6,7 +6,7 @@ export default function NavBar() {
       <>
         <header className="navHeader"></header>
         <nav className="navBar">
-          <Link to="/" className="homeLink">
+          <Link to="/logs" className="homeLink">
             Home
           </Link>
           <Link to="/form" className="formLink">

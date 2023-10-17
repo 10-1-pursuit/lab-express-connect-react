@@ -1,9 +1,11 @@
+
+// A user can see a list of all the logs
 import { response } from "express";
 import { useEffect, useState } from "react";
 
 const API = import.meta.env.VITE_API_URL;
 
-function logs_index({logs, index}){
+function Logs_index(){
 
     const [logs, setLogs] = useState([])
     console.log(logs)
@@ -38,4 +40,4 @@ function logs_index({logs, index}){
 }
 
 
-export default logs_index;
+export default Logs_index;

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 function App() {
 
   
-  const [backEndLogs, setBackEndLogs] = useState([{}]);
+  const [backEndLogs, setBackEndLogs] = useState([]);
   
   useEffect(() => {
     
@@ -18,8 +18,8 @@ function App() {
   console.log(backEndLogs);
 
   return (
-    <div>
-      { typeof backEndLogs.title === "undefined" ? (
+    <div className="App">
+      { (typeof backEndLogs.title === "undefined") ? (
         <p>Loading...</p>
       ) : (
         backEndLogs.map((log, i) => <p key={i}>{log.title}</p>)
@@ -29,3 +29,6 @@ function App() {
 }
 
 export default App;
+
+
+//
