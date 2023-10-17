@@ -26,17 +26,12 @@ useEffect(() => {
       {logs && (
         <>
           {logs.map((log, index) => {
-            //  console.log(log.id)
             return (
               <div key={index}>
                 <Link to={`/logs/${index}`}>
                   {console.log(index)}
                 <h3>{log.title}</h3>
                 </Link>
-                {/* <p>{log.post}</p>
-                <p>Captain: {log.captainName}</p>
-                <p>Mistakes: {log.mistakesWereMadeToday ? 'Yes' : 'No'}</p>          
-                <p>Days Since Incident: {log.daysSinceLastCrisis}</p> */}
               </div>
             );
           })}
