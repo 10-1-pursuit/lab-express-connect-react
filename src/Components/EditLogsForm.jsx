@@ -94,8 +94,10 @@ function EditLogsForm() {
         </div>
     );
 
-
 }
+
+export default EditLogsForm;
+
 
 // let vaild =  (
 //     (req.body.hasOwnProperty( "captainName") && typeof req.body.captainName === "string") || 

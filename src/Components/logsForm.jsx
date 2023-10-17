@@ -125,9 +125,9 @@ const LogForm = () => {
 
     );
 
-    };
+};
 
- export default LogForm;
+export default LogForm;
 
 
 

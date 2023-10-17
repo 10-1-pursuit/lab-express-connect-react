@@ -4,7 +4,7 @@ function LogsPage(){
 
     return (
         <div className="Index">
-          <h2>Index</h2>
+          <h2>Index of Logs</h2>
           <Logs_index />
         </div>
       );
