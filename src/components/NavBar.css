@@ -1,0 +1,9 @@
+.navBar{
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content:space-evenly;
+    border:2px solid black;
+    border-radius: 60px;
+  
+}
