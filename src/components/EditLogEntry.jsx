@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 
-function EditLogEntry() {
+export default function EditLogEntry() {
     const navigate = useNavigate();
     const { id } = useParams();
     const [logData, setLogData] = useState({captainName: '', title: '', post: '', mistakesWereMadeToday: false, daysSinceLastCrisis: 0});
@@ -77,5 +77,3 @@ function EditLogEntry() {
         </div>
     );
     }
-
-    export default EditLogEntry;

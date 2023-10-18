@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 
-function NewLogEntry() {
+export default function NewLogEntry() {
     const navigate = useNavigate();
     const [formData, setFormData] = useState({captainName: '', title: '', post: '', mistakesWereMadeToday: false, daysSinceLastCrisis: 0})
  
@@ -61,4 +61,3 @@ function NewLogEntry() {
         </div>
     );
     }
-    export default NewLogEntry;

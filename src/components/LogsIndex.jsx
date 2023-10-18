@@ -22,22 +22,32 @@ useEffect(() => {
 
   return (
     <>
-    <h1>Index</h1>
-      {logs === null && <div>Loading...</div>}
-      {logs && (
-        <>
-          {logs.map((log, index) => {
-            return (
-              <div key={index}>
-                <Link to={`/logs/${index}`}>
-                  {console.log(index)}
-                <h3>{log.title}</h3>
-                </Link>
-              </div>
-            );
-          })}
-        </>
-      )}
+      <h1>Index</h1>
+      <div className="table-responsive">
+        <table className="table table-bordered">
+          <thead>
+            <tr>
+              <th>Mistakes</th>
+              <th>Captain Name</th>
+              <th>See this log</th>
+            </tr>
+          </thead>
+          <tbody>
+            {logs &&
+              logs.map((log, index) => (
+                <tr key={index}>
+                  <td className="border-cell">
+                    {log.mistakesWereMadeToday ? 'Yes' : 'No'}
+                  </td>
+                  <td className="border-cell">{log.captainName}</td>
+                  <td className="border-cell">
+                    <Link to={`/logs/${index}`}>Read This Log</Link>
+                  </td>
+                </tr>
+              ))}
+          </tbody>
+        </table>
+      </div>
     </>
   );
 }
