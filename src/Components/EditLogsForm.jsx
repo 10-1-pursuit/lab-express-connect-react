@@ -63,14 +63,17 @@ function EditLogsForm() {
         <div className="Edit">
             <form onSubmit={handleEditSumbit}>
                 <label htmlFor="option">Option:</label>
-                <input
-                    id="option"
-                    value={option}
-                    type="text"
+                <select
+                    name="option"
                     onChange={handleOption}
-                    placeholder="Choose the Key"
-                    required
-                />
+                    value={option}
+                >
+                    <option value={"captainName"}>captainName</option>
+                    <option value={"title"}>title</option>
+                    <option value={"post"}> post</option>
+                    <option value={"mistakesWereMadeToday"}>mistakesWereMadeToday</option>
+                    <option value={"daysSinceLastCrisis"}> daysSinceLastCrisis</option>
+                </select>
 
                 <label htmlFor="value">Changes:</label>
                 <input
