@@ -17,6 +17,7 @@ const LogForm = () => {
 
         const API = import.meta.env.VITE_API_URL
 
+
         fetch(`${API}/logs`, {
             method: "POST",
             body: JSON.stringify(log),

@@ -3,7 +3,24 @@ import { useEffect, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom"
 
 function ShowDetails({ log, index }) {
-    let navigate = useNavigate()
+    const [ log, setLog ] = useState([])
+    const navigate = useNavigate();
+    const { index } = useParams();
+    console.log(index)
+
+    useEffect(() =>{
+
+      const fetchedLog = async () => {
+        try {
+            const res = await fetch(`${API}/logs/${index}`)
+            const newLog = await res.json();
+            setLog(newLog)
+        } catch(err){
+            console.log(err)
+        }
+      }
+      fetchedLog();
+    }, [index])
 
     const handleDelete = () => {
 

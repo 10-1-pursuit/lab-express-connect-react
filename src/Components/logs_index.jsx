@@ -1,22 +1,24 @@
 
 // A user can see a list of all the logs
-import { response } from "express";
+//import { response } from "express";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom"
 
 
-const API = import.meta.env.VITE_API_URL;
 
 function Logs_index(){
-
+    
     const [logs, setLogs] = useState([])
     
     useEffect(() => {
-        fetch(`${API}/logs`)
+        
+        //const API = import.meta.env.VITE_API_URL;
+
+        fetch(`http://localhost:4000/logs`)
         .then(((response) => response.json()))
         .then((responseJSON) => setLogs(responseJSON))
         .catch((error) => console.error(error))
-    });
+    }, []);
     
     console.log(logs)
 
@@ -30,7 +32,7 @@ function Logs_index(){
                             <li key={index}>
                                 <h4>{log.title}</h4>
                                 <p>{log.captainName}</p>
-                                <Link to={`/logs/${index}`}> {log.name}</Link>
+                                <Link to={`/logs/${index}`}> {log.title}</Link>
                             </li>
                         )
                     })}
@@ -39,7 +41,7 @@ function Logs_index(){
         </div>
     )
 
-}
+};
 
 
 export default Logs_index;
