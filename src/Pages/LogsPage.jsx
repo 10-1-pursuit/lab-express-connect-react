@@ -1,4 +1,4 @@
-import Logs_index from "../Components/logs_index"; 
+import Logs_index from "../Components/Logs_index"; 
 
 function LogsPage(){
 
@@ -9,7 +9,6 @@ function LogsPage(){
         </div>
       );
 
-
-
-
 }
+
+export default LogsPage;

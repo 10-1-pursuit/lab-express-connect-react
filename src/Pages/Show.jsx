@@ -1,4 +1,4 @@
-import ShowDetails from "../Components/showDetails";
+import ShowDetails from "../Components/ShowDetails.jsx";
 
 function Show() {
   return (

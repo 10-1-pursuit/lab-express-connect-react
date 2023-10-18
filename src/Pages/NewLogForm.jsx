@@ -1,4 +1,4 @@
-import LogForm from "../Components/logsForm";
+import LogForm from "../Components/LogsForm";
 
 
 
