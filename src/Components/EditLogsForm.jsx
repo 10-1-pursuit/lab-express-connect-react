@@ -2,9 +2,6 @@ import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 
 
-const API = import.meta.env.VITE_API_URL
-
-
 function EditLogsForm() {
     let { index } = useParams();
     const navigate = useNavigate();
@@ -15,7 +12,7 @@ function EditLogsForm() {
 
     const EditLog = () => {
 
-        const API = import.meta.env.VITE_API_URL
+        const API = process.env.REACT_APP_API_URL;
 
         fetch(`${API}/logs`, {
             method: "PUT",
@@ -52,9 +49,9 @@ function EditLogsForm() {
 
         if (log === valid) {
             setEditLog(log)
-            editLog();
+            EditLog();
         } else {
-           
+
             alert("You must enter a valid key and value type Captain")
 
         }

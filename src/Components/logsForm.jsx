@@ -7,6 +7,7 @@ const LogForm = () => {
 
     const [captainsLog, setCaptainsLog] = useState([])
     const [log, setLog] = useState({})
+
     const [captainName, setCaptainName] = useState("")
     const [title, setTitle] = useState("")
     const [post, setPost] = useState("")
@@ -15,9 +16,7 @@ const LogForm = () => {
 
     const addLog = () => {
 
-        const API = import.meta.env.VITE_API_URL
-
-
+        const API = process.env.REACT_APP_API_URL;
         fetch(`${API}/logs`, {
             method: "POST",
             body: JSON.stringify(log),
@@ -30,7 +29,6 @@ const LogForm = () => {
             })
             .catch((error) => console.error("catch", error));
     };
-
 
     function handleCaptain(event) {
         setCaptainName(event.target.value)
@@ -59,8 +57,9 @@ const LogForm = () => {
             mistakesWereMadeToday: mistakesMade,
             daysSinceLastCrisis: crisis
         }
+
         setLog(log)
-        setCaptainsLog(...captainsLog, log)
+        setCaptainsLog(prevLogs => [...prevLogs, log])
         addLog()
         setCaptainName("")
         setTitle("")
@@ -75,7 +74,7 @@ const LogForm = () => {
         <div className="container">
             <h3 className="header">Captain's Log Form</h3>
             <div className="logForm">
-                <form onSumbit={handleSubmit}>
+                <form onSubmit={handleSubmit}>
                     <input
                         name="captainName"
                         type="text"
@@ -103,9 +102,10 @@ const LogForm = () => {
                     <select
                         name="mistakesMade"
                         onChange={handleMistakes}
+                        value={mistakesMade}
                     >
-                        <option value={mistakesMade}>true</option>
-                        <option value={mistakesMade}>false</option>
+                        <option value={true}>true</option>
+                        <option value={false}>false</option>
                     </select>
                     <hr></hr>
                     <input
@@ -116,14 +116,20 @@ const LogForm = () => {
                     />
                     <hr></hr>
                 </form>
+                <button onClick={handleSubmit}>Submit</button>
                 <br />
                 <Link to={`/logs`}>
                     <button>Nevermind!</button>
                 </Link>
             </div>
-            <div>{log}</div>
+             <div className="box returnedLog">
+                <h1>{captainName}</h1>
+                <h2>{title}</h2>
+                <p>{post}</p>
+                <p>Mistakes were made today: {log.mistakesWereMadeToday ? 'Yes' : 'No'}</p>
+                <p>Days since last crisis: {log.daysSinceLastCrisis}</p>
+            </div>
         </div>
-
     );
 
 };

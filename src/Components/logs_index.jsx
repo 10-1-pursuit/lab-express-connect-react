@@ -4,23 +4,22 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom"
 
-
-
 function Logs_index(){
     
     const [logs, setLogs] = useState([])
     
+    const API = process.env.REACT_APP_API_URL;
+    
     useEffect(() => {
-        
-        //const API = import.meta.env.VITE_API_URL;
 
-        fetch(`http://localhost:4000/logs`)
-        .then(((response) => response.json()))
+        fetch(`${API}/logs`)
+        .then(((response) => (response.json())))
+
         .then((responseJSON) => setLogs(responseJSON))
         .catch((error) => console.error(error))
     }, []);
     
-    console.log(logs)
+   
 
     return (
         <div className="LogsIndex">
@@ -32,7 +31,7 @@ function Logs_index(){
                             <li key={index}>
                                 <h4>{log.title}</h4>
                                 <p>{log.captainName}</p>
-                                <Link to={`/logs/${index}`}> {log.title}</Link>
+                                <Link to={`/logs/${index}`}> Go to: {log.title}</Link>
                             </li>
                         )
                     })}
