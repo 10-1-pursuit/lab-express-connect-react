@@ -22,7 +22,7 @@ function EditLogsForm() {
             },
         })
             .then(() => {
-                navigate(`/logs`);
+                navigate(`/logs/${index}`);
             })
             .catch((error) => console.error("catch", error));
     };
@@ -31,31 +31,19 @@ function EditLogsForm() {
         setOption(event.target.value)
     }
     const handleValue = (event) => {
-        setValue(event.target.value)
+        if (option === "daysSinceLastCrisis"){
+            setValue(parseInt(event.target.value))
+        } else {
+            setValue(event.target.value)
+        }
+    
     };
 
     function handleEditSumbit(event) {
         event.preventDefault();
-
-        let valid = (
-            (option === "captainName" && typeof value === "string")
-                (option === "title" && typeof value === "string")
-                (option === "post" && typeof value === "string")
-                (option === "mistakesWereMadeToday" && typeof value === "boolean")
-                (option === "daysSinceLastCrisis" && typeof value === "number")
-        );
-
-        const log = { option: value }
-
-        if (log === valid) {
-            setEditLog(log)
+            setEditLog()
             EditLog();
-        } else {
-
-            alert("You must enter a valid key and value type Captain")
-
-        }
-
+       
     };
 
 
