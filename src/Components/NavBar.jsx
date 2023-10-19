@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { useEffect } from "react";
+import pic from "/Users/xavierrice/Desktop/module4/Express/CaptainsFolder/lab-express-connect-react/src/Pictures/captainsPics.jpeg"
 import "./NavBar.css"
 
 
@@ -7,7 +7,7 @@ const NavBar = () => {
   return (
     <div className="desktop-1">
       <div className="frame">
-        <img className="frame-child" alt="" src="/rectangle-1@2x.png" />
+        <img className="frame-child" alt="" src={pic} />
       </div>
       <div className="captains-log">Captain’s Log</div>
       <div className="component-parent">

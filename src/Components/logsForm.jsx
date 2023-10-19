@@ -69,76 +69,68 @@ const LogForm = () => {
         console.log(log)
     };
 
-
-    return (
-        <div className="container">
-            <h3 className="header">Captain's Log Form</h3>
-            <div className="logForm">
-                <form onSubmit={handleSubmit}>
-                    <input
-                        name="captainName"
-                        type="text"
-                        value={captainName}
-                        onChange={handleCaptain}
-                        placeholder="Captain's Name"
-                    />
-                    <hr></hr>
-                    <input
-                        name="title"
-                        type="text"
-                        value={title}
-                        onChange={handleTitle}
-                        placeholder="Title"
-                    />
-                    <hr></hr>
-                    <input
-                        name="post"
-                        type="text"
-                        value={post}
-                        onChange={handlePost}
-                        placeholder="Log Here"
-                    />
-                    <hr></hr>
-                    <select
-                        name="mistakesMade"
-                        onChange={handleMistakes}
-                        value={mistakesMade}
-                    >
-                        <option value={true}>true</option>
-                        <option value={false}>false</option>
-                    </select>
-                    <hr></hr>
-                    <input
-                        name="daysSinceLastCrisis"
-                        type="number"
-                        value={crisis}
-                        onChange={handleCrisis}
-                    />
-                    <hr></hr>
-                </form>
-                <button onClick={handleSubmit}>Submit</button>
-                <br />
-                <Link to={`/logs`}>
-                    <button>Nevermind!</button>
-                </Link>
-            </div>
-             <div className="box returnedLog">
-                <h1>{captainName}</h1>
-                <h2>{title}</h2>
-                <p>{post}</p>
-                <p>Mistakes were made today: {log.mistakesWereMadeToday ? 'Yes' : 'No'}</p>
-                <p>Days since last crisis: {log.daysSinceLastCrisis}</p>
-            </div>
+return (
+    <div className="container">
+        <h3 className="header">Captain's Log Form</h3>
+        <div className="logForm">
+            <form onSubmit={handleSubmit}>
+                <input
+                    name="captainName"
+                    type="text"
+                    value={captainName}
+                    onChange={handleCaptain}
+                    placeholder="Captain's Name"
+                />
+                <hr></hr>
+                <input
+                    name="title"
+                    type="text"
+                    value={title}
+                    onChange={handleTitle}
+                    placeholder="Title"
+                />
+                <hr></hr>
+                <input
+                    name="post"
+                    type="text"
+                    value={post}
+                    onChange={handlePost}
+                    placeholder="Log Here"
+                />
+                <hr></hr>
+                <select
+                    name="mistakesMade"
+                    onChange={handleMistakes}
+                    value={mistakesMade}
+                >
+                    <option value={true}>true</option>
+                    <option value={false}>false</option>
+                </select>
+                <hr></hr>
+                <input
+                    name="daysSinceLastCrisis"
+                    type="number"
+                    value={crisis}
+                    onChange={handleCrisis}
+                />
+                <hr></hr>
+            </form>
+            <button onClick={handleSubmit}>Submit</button>
+            <br />
+            <Link to={`/logs`}>
+                <button>Nevermind!</button>
+            </Link>
         </div>
-    );
+         <div className="box returnedLog">
+            <h1>{captainName}</h1>
+            <h2>{title}</h2>
+            <p>{post}</p>
+            <p>Mistakes were made today: {log.mistakesWereMadeToday ? 'Yes' : 'No'}</p>
+            <p>Days since last crisis: {log.daysSinceLastCrisis}</p>
+        </div>
+    </div>
+);
 
 };
 
 export default LogForm;
-
-
-
-
-
-
-
