@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react';
+import './LogsIndex.css';
 
 export default function LogsIndex () {
 const [logs, setLogs] = useState(null);
@@ -23,8 +24,8 @@ useEffect(() => {
   return (
     <>
       <h1>Index</h1>
-      <div className="table-responsive">
-        <table className="table table-bordered">
+      <div className="table-wrapper">
+        <table>
           <thead>
             <tr>
               <th>Mistakes</th>
@@ -36,13 +37,9 @@ useEffect(() => {
             {logs &&
               logs.map((log, index) => (
                 <tr key={index}>
-                  <td className="border-cell">
-                    {log.mistakesWereMadeToday ? 'Yes' : 'No'}
-                  </td>
-                  <td className="border-cell">{log.captainName}</td>
-                  <td className="border-cell">
-                    <Link to={`/logs/${index}`}>Read This Log</Link>
-                  </td>
+                  <td>{log.mistakesWereMadeToday ? 'Yes' : 'No'}</td>
+                  <td>{log.captainName}</td>
+                  <td><Link to={`/logs/${index}`}>Read This Log</Link></td>
                 </tr>
               ))}
           </tbody>
