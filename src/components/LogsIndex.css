@@ -1,3 +1,10 @@
-.table-wrapper {
-    border: 1px solid black;
+.centered-table th,
+.centered-table td {
+  text-align: center;
+}
+
+.centered-table thead th {
+  background: #333;
+  color: white;
+  font-weight: bold;
 }
