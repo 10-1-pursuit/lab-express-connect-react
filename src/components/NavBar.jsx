@@ -1,16 +1,17 @@
 import "./NavBar.css"
+// import NewLogForm from "../Pages/NewLog";
+
+import { Link } from "react-router-dom";
 
 function NavBar(){
     return(
         <>
         <div className="navBar">
-        <h1>Captain's Log</h1>
+        <Link to={`/`} className="nav"><h1>Captain's Log</h1></Link>
         <br />
+`       <Link to={`/logs`}> <button>Recent Logs</button></Link>
 
-        <button>
-            New Log
-        </button>
-  
+        <Link to={`/logs/new`}> <button>New Log </button></Link>
         </div>
         </>
     )

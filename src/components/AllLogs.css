@@ -1,0 +1,55 @@
+
+
+.mistake{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.captain{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+
+    
+}
+
+
+.front{
+    display:flex;
+    flex-direction: row;
+    padding: 20px;
+    /* align-content:center; */
+    justify-content:space-between;
+    gap:100px;
+    
+}
+
+
+.logs-container {
+     display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    justify-content: center;
+    border: 3px solid white;
+    background-color: black;
+    border-radius: 50px;
+    width: 58%;
+    position: relative;
+    left: 330px;
+    
+}
+
+.linktag{
+    color:white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.captainTitle{
+    display:flex;
+    flex-direction: column;
+    align-content: end;
+ 
+}

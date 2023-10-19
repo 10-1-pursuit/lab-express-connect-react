@@ -1,56 +1,42 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from "react-router-dom";
+import "./AllLogs.css"
 
-import "./IndexPage.css"
-
-function IndexPage() {
+function AllLogs({index}) {
 
     const [logs, setLogs] = useState([]);
-    // const API = process.env.REACT_APP_API_URL
+    const API = process.env.REACT_APP_API_URL;
 
     useEffect(() => {
 
-        fetch('http://localhost:3001/logs')
+        fetch(`${API}/logs`)
             .then((response) => response.json())
             .then((responseJSON) => setLogs(responseJSON))
             .catch((error) => console.error(error));
     });
 
     return (
-        <>
+        <div className="logs-container">
+        {logs.map((log, index) => (
+          <div className="front" key={index}>
+            <div className="mistake">
+              <h2>{[log.mistakesWereMadeToday].join('')}</h2>
+            </div>
+            <div className="captain">
+              <h2>{log.captainName}</h2>
+            </div>
+            <div className="captainTitle">
+              <h2> <Link to={`/logs/${index}`}className="linktag"> {log.title}</Link></h2>
+            </div>
+          </div>
+        ))}
+      </div>
+    );
 
-            {logs.map((log) => {
-
-                return (
-
-                    <div className="front">
-
-                        <div>                      
-                            {[log.mistakesWereMadeToday].join('')}
-                        </div>
-
-                        <hr />
-
-                        <div>
-                            {log.captainName}
-                        </div>
-
-                        <hr />
-
-                        <div>                           
-                            {log.title}
-                        </div>
-
-                    </div>
-                )
-
-            })}
-
-        </>
-
-    )
+    
 }
 
-export default IndexPage
+export default AllLogs
 
 
 
