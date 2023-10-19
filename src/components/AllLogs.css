@@ -23,6 +23,7 @@
     /* align-content:center; */
     justify-content:space-between;
     gap:100px;
+    border-bottom: 2px dotted white;
     
 }
 
@@ -50,6 +51,10 @@
 .captainTitle{
     display:flex;
     flex-direction: column;
-    align-content: end;
+    align-content: flex-end;
  
+}
+
+.captainTitle :hover{
+    color:deepskyblue
 }

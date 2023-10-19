@@ -59,6 +59,11 @@ label{
   text-decoration: none;
 }
 
+
+.nav :hover{
+  color:cornsilk
+}
+
 .NewForm{
   display:flex;
   flex-direction: column;
