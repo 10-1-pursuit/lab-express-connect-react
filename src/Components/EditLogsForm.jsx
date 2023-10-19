@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 
 
@@ -33,6 +33,7 @@ function EditLogsForm() {
     const handleValue = (event) => {
         if (option === "daysSinceLastCrisis"){
             setValue(parseInt(event.target.value))
+            console.log(value)
         } else {
             setValue(event.target.value)
         }

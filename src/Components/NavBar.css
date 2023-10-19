@@ -1,0 +1,67 @@
+.headernav-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 39px;
+    width: 799px;
+    height: 157px;
+    object-fit: cover;
+    mix-blend-mode: normal;
+  }
+  .home {
+    position: relative;
+    display: inline-block;
+    width: 75px;
+    height: 27px;
+    flex-shrink: 0;
+  }
+  .home-wrapper,
+  .links {
+    text-decoration: none;
+    width: 75px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    color: inherit;
+  }
+  .links {
+    position: absolute;
+    top: calc(50% + 51.5px);
+    left: calc(50% - 362.5px);
+    background-color: #6342e8;
+    width: 699px;
+    mix-blend-mode: normal;
+  }
+  .captains-log-book {
+    position: relative;
+    display: inline-block;
+    width: 434px;
+    height: 83px;
+    flex-shrink: 0;
+  }
+  .app-name,
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .title {
+    position: absolute;
+    top: 14px;
+    left: 186px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 0 5px;
+    font-size: 45px;
+    color: #d9d1fb;
+  }
+  .headernav {
+    width: 799px;
+    height: 157px;
+    text-align: center;
+    font-size: var(--font-size-base);
+    color: var(--color-lime);
+    font-family: var(--font-krungthep);
+  }
+  
