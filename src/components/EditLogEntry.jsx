@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
+import { Card } from "react-bootstrap";
+import './EditLogEntry.css'
 
 export default function EditLogEntry() {
     const navigate = useNavigate();
@@ -52,7 +54,9 @@ export default function EditLogEntry() {
 
     return (
         <div className="EditLogEntry">
-            <h2> Edit </h2>
+            <h1> Edit </h1>
+            <Card className="border-5">
+            <Card.Body>
             <form onSubmit={handleSubmit}>
             <label htmlFor="captainName">Captain's Name:</label>
                 <input id="captainName" value={logData.captainName} type="text" onChange={handleTextChange} placeholder="Captain's Name" required />
@@ -63,17 +67,19 @@ export default function EditLogEntry() {
                 <label htmlFor="post">Post:</label>
                 <input id="post" value={logData.post} type="text" onChange={handleTextChange} placeholder="Post" required />
                 <br />
-                <label htmlFor="mistakesWereMadeToday">Mistakes made today:</label>
-                <input id="mistakesWereMadeToday" type="checkbox" onChange={handleCheckboxChange} checked={logData.mistakesWereMadeToday} />
-                <br />
                 <label htmlFor="daysSinceLastCrisis">Days Since Last Crisis:</label>
                 <input id="daysSinceLastCrisis" value={logData.daysSinceLastCrisis} type='number' onChange={handleTextChange} required />
+                <br />
+                <label htmlFor="mistakesWereMadeToday">Mistakes made today:</label>
+                <input id="mistakesWereMadeToday" type="checkbox" onChange={handleCheckboxChange} checked={logData.mistakesWereMadeToday} />
                 <br />
                 <br />
                 <button type="submit">Submit</button>
             </form>
             <br />
             <Link to="/logs"><button>Nevermind!</button></Link>
+            </Card.Body>
+            </Card>
         </div>
     );
     }

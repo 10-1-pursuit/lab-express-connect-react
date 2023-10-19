@@ -1,0 +1,9 @@
+.EditLogEntry form label {
+    margin: 5px;
+    padding: 2px; 
+  }
+  
+  .EditLogEntry input {
+    padding: 2px;
+    margin: 5px;
+  }
