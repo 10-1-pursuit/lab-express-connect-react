@@ -1,6 +1,7 @@
 //- A user can click on a specific log and see more details
 import { useEffect, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom"
+import "./ShowDetails.css"
 
 function ShowDetails() {
     const [log, setLog] = useState([])

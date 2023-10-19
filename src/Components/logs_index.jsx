@@ -1,8 +1,7 @@
 
-// A user can see a list of all the logs
-//import { response } from "express";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom"
+import "./Logs_index.css"
 
 function Logs_index(){
     

@@ -1,0 +1,46 @@
+.container {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.box {
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+h3 {
+    font-size: 18px;
+    color: #555;
+}
+
+p {
+    font-size: 16px;
+    color: #777;
+}
+
+h4, h5 {
+    font-size: 14px;
+    color: #999;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
