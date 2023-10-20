@@ -30,6 +30,10 @@ const Logs = () => {
             .catch((err) => console.error(err));
     };
 
+    const handleEdit = () => {
+        navigate(`/logs/${index}/edit`);
+    }
+
     return (
         <div>
             <h2>Logs</h2>
@@ -42,6 +46,7 @@ const Logs = () => {
                     <p>MistakesWereMadeToday: {logs[index].mistakesWereMadeToday ? "Yes" : "No"}</p>
                     <p>DaysSinceLastCrisis: {logs[index].daysSinceLastCrisis}</p>
                     <button onClick={() => navigate("/logs")}>Back</button>
+                    <button onClick={handleEdit}>Edit</button>
                     <button onClick={handleDelete}>Delete</button>
                 </div>
             ) : (

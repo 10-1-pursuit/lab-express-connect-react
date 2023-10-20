@@ -66,8 +66,7 @@ const NewLogForm = () => {
         </div>
         <div>
           <label htmlFor="post">Post:</label>
-          <input
-            type="text"
+          <textarea
             id="post"
             name="post"
             value={logData.post}
