@@ -1,4 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import NavBar from "./components/NavBar";
+import Show from "./Pages/show";
+import New from "./Pages/new";
 
 
 function App() {
@@ -7,13 +10,20 @@ function App() {
   
   return(
     <>
-     <div className="app" style={{fontSize: '173px'}}> <b>Hello World</b></div>
+    <div className="app">
      <Router>
-      <NavBar></NavBar>
+      <NavBar/>
       <Routes>
-        <Route />
+        <Route path="/" element={<Home />} />
+        <Route path="/logs" element={<Index />} />
+        <Route path="/logs/new" element={<New />} />
+        <Route path="/log/:arrayIndex" element={<Show />} />
+        <Route path="/log/:arrayIndex/edit" element={<Show />} />
+        <Route path="*" element={<FourOhFour />} />
+
       </Routes>
      </Router>
+     </div>
      </>
      );
 }
