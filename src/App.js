@@ -6,8 +6,7 @@ import EditLogEntry from "./components/EditLogEntry";
 import "bootstrap/dist/css/bootstrap.css";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import Stars from "./components/Stars/Stars";
-import './app.css'
-// import NavBar from './components/NavBar';
+import "./app.css";
 
 function App() {
   return (
@@ -36,8 +35,8 @@ function App() {
               <Route path="/logs/:id/edit" element={<EditLogEntry />} />
             </Routes>
             <div>
-          <Stars />
-        </div>
+              <Stars />
+            </div>
           </div>
         </Container>
         <footer>{/* Footer */}</footer>
