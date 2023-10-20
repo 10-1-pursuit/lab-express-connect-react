@@ -41,7 +41,7 @@ function SingleLogPage() {
     try {
       let result = await axios.delete(`${API}/logs/${id}`);
       console.log(result);
-      navigate("/");
+      navigate("/logs");
     } catch (error) {
       console.log(error);
     }
