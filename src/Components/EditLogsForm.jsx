@@ -14,7 +14,7 @@ function EditLogsForm() {
 
         const API = process.env.REACT_APP_API_URL;
 
-        fetch(`${API}/logs`, {
+        fetch(`${API}/logs/${index}`, {
             method: "PUT",
             body: JSON.stringify(editLog),
             headers: {
@@ -29,22 +29,27 @@ function EditLogsForm() {
 
     const handleOption = (event) => {
         setOption(event.target.value)
-    }
+        console.log(option)
+    };
     const handleValue = (event) => {
         if (option === "daysSinceLastCrisis"){
             setValue(parseInt(event.target.value))
             console.log(value)
         } else {
             setValue(event.target.value)
+            console.log(value)
         }
     
     };
 
     function handleEditSumbit(event) {
         event.preventDefault();
-            setEditLog()
+         const log = {[option]:value}
+         console.log(option, value, editLog)
+            setEditLog(log)
             EditLog();
-       
+            setValue("")
+            setOption("")
     };
 
 
