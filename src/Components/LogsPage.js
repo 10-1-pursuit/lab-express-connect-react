@@ -7,11 +7,11 @@ function LogsPage() {
   const API = process.env.REACT_APP_API;
 
   useEffect(() => {
-    fetchLogs();
+    indexLogs();
   }, []);
 
   // Index Route
-  async function fetchLogs() {
+  async function indexLogs() {
     try {
       let result = await axios.get(`${API}/logs`);
       console.log(result.data);
@@ -41,13 +41,11 @@ function LogsPage() {
           </tr>
           {logs.map((item, index) => {
             return (
-              <>
-                <tr key={index}>
-                  <td>💥</td>
-                  <td>{item.captainName}</td>
-                  <td>{item.title}</td>
-                </tr>
-              </>
+              <tr key={index}>
+                <td>💥</td>
+                <td>{item.captainName}</td>
+                <td>{item.title}</td>
+              </tr>
             );
           })}
         </tbody>
