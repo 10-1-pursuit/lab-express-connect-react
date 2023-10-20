@@ -3,3 +3,23 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Lalezar:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Adamina:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jockey+One:wght@400&display=swap");
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* fonts */
+  --font-jockey-one: "Jockey One";
+  --font-adamina: Adamina;
+  --font-lalezar: Lalezar;
+
+  /* font sizes */
+  --font-size-4xl: 23px;
+
+  /* Colors */
+  --color-blue: #100bf2;
+}
