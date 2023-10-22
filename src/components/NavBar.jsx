@@ -6,18 +6,18 @@ const NavBar = () => {
     return (
         <>
         <div className="Nav">
+           <h1> Captain's Log</h1>
            
             <Link to={'/logs'} >
                 🏴‍☠️All Captains
             </Link> 
-            <Link to={'/logs/new'} >
+            <Link className="" to={'/logs/new'} >
                 1️⃣ New Log
             </Link> <br/>
             {/* <Link to={'/'} >
                 Home
             </Link> */}
             </div>
-     <div className="app" style={{fontSize: '137px', fontFamily: 'Fantasy', color: 'Teal'}}> <b><em>Hello World</em></b></div>
      </>
     )
 }

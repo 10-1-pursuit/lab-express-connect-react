@@ -1,11 +1,11 @@
-
 const Show = () => {
+  return (
+    <>
+      <div>
+        <h3>Show Show Show </h3>
+      </div>
+    </>
+  );
+};
 
-    return (
-        <>
-        <div>
-            <h3>Show Show Show </h3></div></>
-    )
-}
-
-export default Show
+export default Show;

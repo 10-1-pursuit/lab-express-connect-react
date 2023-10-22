@@ -1,9 +1,9 @@
-
-
 const FourOhFour = () => {
+  return (
+    <>
+      <h2> Page Not Found </h2>
+    </>
+  );
+};
 
-    return (
-        <>
-        <h2> Page Not Found </h2></>
-    )
-}
+export default FourOhFour;
