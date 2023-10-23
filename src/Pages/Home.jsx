@@ -1,15 +1,18 @@
+
 const Home = () => {
   return (
     <>
-      <h2
-        className="app"
-        style={{ fontSize: "137px", fontFamily: "Fantasy", color: "Teal" }}
-      >
-        {" "}
-        <b>
-          <em>Hello World</em>
-        </b>
-      </h2>
+      <div>
+        <h2
+          className="app"
+          style={{ fontSize: "137px", fontFamily: "Fantasy", color: "Teal" }}
+        >
+          {" "}
+          <b>
+            <em>Ahoy Matey! </em>
+          </b>
+        </h2>
+      </div>
     </>
   );
 };

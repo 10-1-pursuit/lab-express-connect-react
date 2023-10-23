@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import LogDetails from "./LogDetails";
 // import Log from './Log'
 
 const API = process.env.REACT_APP_API_URL;
@@ -44,6 +45,7 @@ const Logs = () => {
                   </Link>
                 </h2>
               </div>
+              <h3> <LogDetails/> </h3>
             </div>
           ))}
       </div>

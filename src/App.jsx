@@ -7,8 +7,6 @@ import Home from "./Pages/Home";
 import Index from "./Pages/Index";
 
 function App() {
-  // const API = import.meta.env.VITE_REACT_VAR;
-
   return (
     <>
       <div className="app">
@@ -17,9 +15,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/logs" element={<Index />} />
+            <Route path="/log/:id" element={<Show />} />
+            <Route path="/log/:id/edit" element={<Show />} />
             <Route path="/logs/new" element={<New />} />
-            <Route path="/log/:arrayIndex" element={<Show />} />
-            <Route path="/log/:arrayIndex/edit" element={<Show />} />
             <Route path="*" element={<FourOhFour />} />
           </Routes>
         </Router>

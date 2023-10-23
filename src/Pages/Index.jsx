@@ -5,7 +5,8 @@ const Index = () => {
   return (
     <>
       <div className='Index'>
-        <h2 className='badge bg-primary'>Hey, these are the Captains' quarters! </h2>
+      <h1 className=''> Captain's Log</h1>
+
         <Logs/>
         {/* add buttons to take you logs/:id */}
         {/* <button type="button" class="btn btn-primary">
