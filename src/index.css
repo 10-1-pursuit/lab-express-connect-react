@@ -56,3 +56,6 @@ body{height:100%;display: grid;}
 
 div#root{height:100%};
  th{text-align: center;}
+
+#form{text-align: center;border: 2px solid yellow;}
+#l1,#l2,#l3,#l4,#l5{margin-right: 250px;}
