@@ -1,6 +1,7 @@
-import React, { useState }  from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './NavBar.css';
+
 
 function NavBar() {
     // State to track dark mode
@@ -14,16 +15,14 @@ function NavBar() {
     };
 
     return (
-
         <nav>
             <button id="dark-mode-toggle" onClick={toggleDarkMode}>
                 Toggle Dark Mode
             </button>
-            <h1>Captains Log</h1>
+            <div>
+                <Link to="/logs" className="captLog" >Captain's Log</Link>
+            </div>
             <ul>
-                <li>
-                    <Link to="/logs">All Logs</Link>
-                </li>
                 <li>
                     <Link to="/logs/new">New Log</Link>
                 </li>

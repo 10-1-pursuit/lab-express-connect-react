@@ -1,47 +1,45 @@
-/* NavBar.css */
-
 nav {
-    background-color: #333;
-    /* Background color for the navigation bar */
+    background-color: #16113f;
     color: white;
-    /* Text color */
     padding: 10px 0;
-    /* Padding for the top and bottom */
 }
 
-h1 {
-    text-align: center;
+#dark-mode-toggle {
+    margin-bottom: 11px;
+}
+
+.captLog {
+    margin-top: 28px;
+    margin-left: 11px;
+    font-weight: bold;
+    text-align: left;
+    font-size: 36px;
 }
 
 ul {
+    margin-top: -40px;
     list-style: none;
-    /* Remove bullet points for the list items */
     display: flex;
-    /* Display the list items in a row */
-    justify-content: center;
-    /* Center the list items horizontally */
+    justify-content: flex-end;
     align-items: center;
-    /* Center the list items vertically */
     padding-left: 0px;
+    padding-right: 22px;
 }
 
 li {
     margin: 0 20px;
-    /* Add spacing between list items */
+    border-radius: 5%;
+    border: #ff6600 solid 1.5px;
+    padding: 9px;
 }
 
 a {
     text-decoration: none;
-    /* Remove underline from links */
     color: white;
-    /* Text color for links */
     font-weight: bold;
-    /* Make the text bold */
     font-size: 18px;
-    /* Adjust the font size as needed */
 }
 
 a:hover {
     color: #ff6600;
-    /* Change text color on hover */
 }
