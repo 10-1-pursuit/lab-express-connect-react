@@ -1,0 +1,40 @@
+.centered-table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 22px auto;
+}
+
+.centered-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.centered-table th,
+.centered-table td {
+    border: 2px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.centered-table th {
+    background-color: #d21515;
+}
+
+.centered-table tr:hover {
+    background-color: #ff6600b2;
+}
+
+.centered-table th,
+.centered-table td {
+    padding: 15px;
+    text-align: center;
+}
+
+.centered-table td {
+    padding: 8px;
+}
+
+.centered-table a {
+    text-decoration: none;
+    color: #007bff;
+}

@@ -1,0 +1,45 @@
+nav {
+    background-color: #16113f;
+    color: white;
+    padding: 10px 0;
+}
+
+#dark-mode-toggle {
+    margin-bottom: 11px;
+}
+
+.captLog {
+    margin-top: 28px;
+    margin-left: 11px;
+    font-weight: bold;
+    text-align: left;
+    font-size: 36px;
+}
+
+ul {
+    margin-top: -40px;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 0px;
+    padding-right: 22px;
+}
+
+li {
+    margin: 0 20px;
+    border-radius: 5%;
+    border: #ff6600 solid 1.5px;
+    padding: 9px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+a:hover {
+    color: #ff6600;
+}
