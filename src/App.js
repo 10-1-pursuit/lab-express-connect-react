@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css'; 
+import './App.css';
 import NavBar from './components/NavBar';
 // import LogsList from './components/LogsList';
 // import LogDetail from './components/LogDetail';
@@ -9,26 +9,15 @@ import NavBar from './components/NavBar';
 
 
 
-const App = () =>{
+const App = () => {
 
-// State to track dark mode
-const [isDarkMode, setIsDarkMode] = useState(false);
-
-// Function to toggle dark mode
-const toggleDarkMode = () => {
-  const body = document.body;
-  body.classList.toggle('dark-mode');
-  setIsDarkMode(!isDarkMode); // Update state to track dark mode
-};
 
 
   return (
     <Router>
- <button id="dark-mode-toggle" onClick={toggleDarkMode}>
-        Toggle Dark Mode
-      </button>      <div>
-      <h2>Hello, world!</h2>
-    </div>
+      <div>
+        {/* <h2>Hello, world!</h2> */}
+      </div>
       <NavBar />
       <Routes>
         {/* <Route path="/logs" exact component={LogsList} />

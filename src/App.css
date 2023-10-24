@@ -5,9 +5,9 @@
       color: #000000;
     }
   } */
-  
-  /* Dark Mode */
-  /* @media (prefers-color-scheme: dark) {
+
+/* Dark Mode */
+/* @media (prefers-color-scheme: dark) {
     body {
       background-color: #333333;
       color: #ffffff;
@@ -15,15 +15,18 @@
   }
    */
 
-   /* Light Mode Styles */
+/* Light Mode Styles */
 body {
-    background-color: #ffffff; /* Light background color */
-    color: #000000; /* Light text color */
-  }
-  
-  /* Dark Mode Styles */
-  body.dark-mode {
-    background-color: #333333; /* Dark background color */
-    color: #ffffff; /* Dark text color */
-  }
-  
+    background-color: #ffffff;
+    /* Light background color */
+    color: #000000;
+    /* Light text color */
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #333333;
+    /* Dark background color */
+    color: #ffffff;
+    /* Dark text color */
+}
