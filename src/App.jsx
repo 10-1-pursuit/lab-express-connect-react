@@ -1,25 +1,25 @@
 import React from "react";
-import { useEffect, useState } from "react";
-import axios from "axios";
-
-const API = process.env.REACT_APP_API_URL;
-
-console.log(API)
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import NavBar from "./components/NavBar";
+import LogList from "./components/LogList";
+import LogDetail from "./components/LogDetail";
+import NewLog from "./components/NewLog";
+import EditLog from "./components/EditLog";
 
 function App() {
-  const [logs, setLogs] = useState([])
-
-  useEffect(() => {
-    axios.get(`${API}/logs`).then(res => setLogs(res.data)).catch(error => console.log(error))
-  }, [])
-
   return (
-    <>
-      <div>Hello World</div>;
-      <div> {logs.map((log, index) => <div key={index}>{log.captainName}</div>)} </div>
-
-    </>)
+    <Router>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/logs" element={<LogList />} />
+        <Route path="/logs/new" element={<NewLog />} />
+        <Route path="/logs/:index" element={<LogDetail />} />
+        <Route path="/logs/:index/edit" element={<EditLog />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
