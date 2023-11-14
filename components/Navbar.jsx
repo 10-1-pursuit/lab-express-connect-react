@@ -1,19 +1,19 @@
 import React from "react";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-function NavBar () {
+const NavBar = () => {
     return (
-        <nav className="navbar">
+        <nav>
             <ul>
                 <li>
-                    <Link to ="/">Home</Link>
+                    <Link to="/logs">View Logs</Link>
                 </li>
                 <li>
-                    <Link to = "/logs/new">New Log</Link>
+                    <Link to="/logs/new">New Log</Link>
                 </li>
             </ul>
         </nav>
     );
-}
+};
 
 export default NavBar;
